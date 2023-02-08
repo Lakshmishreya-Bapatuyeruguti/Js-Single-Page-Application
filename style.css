@@ -33,19 +33,44 @@
   font-weight: 800;
 }
 .sectionHome,
-.sectionAboutUs {
+.sectionAboutUs,
+.sectionServices {
   display: flex;
-  background-color: aqua;
+  /* background-color: aqua; */
   border-bottom: 3px solid #f25278;
 }
 .leftPart {
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
   width: 30%;
 }
 .rightPart {
-  background-color: rgb(48, 145, 230);
+  background-color: white;
   width: 70%;
 }
 .sectionContent {
-  padding: 1%;
+  padding: 1% 2%;
+  font-size: 19px;
+}
+
+.homePic,
+.homePic2 {
+  height: 90%;
+  width: 100%;
+}
+.sextionImages {
+  width: 100%;
+}
+.sectionTitle3 {
+  text-align: center;
+}
+.imgBox {
+  margin: auto;
+  width: 30%;
+  height: 10%;
+  background-color: aqua;
+}
+.pic1 {
+  /* height: 100%; */
+  width: 100%;
+  height: auto;
 }
