@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: white;
+  display: flex;
+  /* justify-content: space-around; */
+  border: 3px solid whitesmoke;
+}
+.logo {
+  height: 60px;
+  margin: 5px;
+}
+.logoName {
+  position: relative;
+  top: 12px;
+  margin-left: 15px;
+  color: #f25278;
+}
+.links {
+  list-style: none;
+  display: flex;
+  position: absolute;
+  right: 1%;
+  top: 2%;
+}
+.linkItem {
+  padding: 10px 30px;
+  color: #f25278;
+  font-size: 20px;
+  font-weight: 800;
+}
+.sectionHome,
+.sectionAboutUs {
+  display: flex;
+  background-color: aqua;
+  border-bottom: 3px solid #f25278;
+}
+.leftPart {
+  background-color: aliceblue;
+  width: 30%;
+}
+.rightPart {
+  background-color: rgb(48, 145, 230);
+  width: 70%;
+}
+.sectionContent {
+  padding: 1%;
+}
