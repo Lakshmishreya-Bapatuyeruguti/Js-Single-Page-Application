@@ -1,6 +1,6 @@
 # Js-Single-Page-Application
 ### Done By- Lakshmishreya Bapatuyeruguti -Blockchain Trainee-2023
-- Made a single page js application consisting scroll to section functionality and image slider functionality
+- Made a single page javscript application consisting scroll to section functionality and image slider functionality
 
 - Results screenshots <br>
 
