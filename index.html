@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS Single Page Application</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    
   </head>
   <body>
     <header>
@@ -14,18 +19,20 @@
           <img src="assets/simlogo.png" alt="Logo" class="logo" />
           <h1 class="logoName">Simform</h1>
           <ul class="links">
-            <li class="linkItem">Home</li>
-            <li class="linkItem">About Us</li>
-            <li class="linkItem">Images</li>
-            <li class="linkItem">Services</li>
+           <button onclick="scrollToHome() "> <li class="linkItem">Home</li></button>
+            <button onclick="scrollToAboutUs() "><li class="linkItem">About Us</li></button>
+            <button onclick="scrollToImages() "><li class="linkItem">Images</li></button>
+              <button onclick="scrollToServices()"><li class="linkItem">Services</li></button>
           </ul>
         </div>
-        <div class="sectionHome">
+        <div class="sectionHome" id="home">
           <div class="leftPart">
             <h1 class="sectionTitle">Home</h1>
             <img src="/assets/home3.avif" alt="homePic" class="homePic2"> 
           </div>
           <div class="rightPart">
+            <p class="sectionContent">
+            <p class="sectionContent">Simform is one of the finest organizations with great talented team and highly proffesional individuals.We have a great work culture and always look for seamless and good quality product delivery to our clients</p>
             <p class="sectionContent">
               Modern digital experiences require smarter methodologies, better
               technologies, and innovative approaches to win users’ trust and
@@ -59,7 +66,7 @@
             </p>
 
             <p class="sectionContent">
-              <h2 class="sectionContent">What does your development process look like?</h2>
+              <h2 class="sectionContent pinkCon">What does your development process look like?</h2>
               <p class="sectionContent">1) Test Cases Driven User Stories for Clear Requirements -
               When our engagement with the client starts we help them create detailed user stories and scope out the next few sprints.</p>
               
@@ -85,9 +92,7 @@
                 <p class="sectionContent">8) Post-release
                 It’s important to circle back and review how the process went once you’re done, be it a success or failure.</p>
                 
-                <p class="sectionContent"></p>Did the testing rightly model the production scenario?
-                Did your team correctly estimate the effort required to release a product?
-                How is the product running in production?</p>
+              
                 
                 <p class="sectionContent">Review how well the team performed by revisiting the implementation and testing checkpoints. Your team will adjust their performance accordingly as they grow used to being held accountable for every step in this process.</p>
                             </p>
@@ -95,10 +100,11 @@
         
           </div>
         </div>
-        <div class="sectionAboutUs">
+        <div class="sectionAboutUs" id="abUs">
          
           <div class="rightPart">
             <p class="sectionContent">
+              We were founded in <b>2010</b> and are based out in US and INDIA (AHMEDABAD)
               Modern digital experiences require smarter methodologies, better
               technologies, and innovative approaches to win users’ trust and
               attention. Cloud-native technologies have the potential to deliver
@@ -131,7 +137,7 @@
             </p>
 
             <p class="sectionContent">
-              <h2 class="sectionContent" >What does your development process look like?</h2>
+              <h2 class="sectionContent pinkCon" >What does your development process look like?</h2>
               <p class="sectionContent">1) Test Cases Driven User Stories for Clear Requirements -
               When our engagement with the client starts we help them create detailed user stories and scope out the next few sprints.</p>
               
@@ -142,21 +148,7 @@
                 
                 <p class="sectionContent">4) Documentation
                 We document everything from application and code level architecture decisions, to live user stories document, to design focused UX/UI/Design System documents.</p>
-                
-                <p class="sectionContent">5) Constant Communication and Retrospective
-                Stand-Up Each workday begins with a brief team stand-up meeting to discuss what we did yesterday, and what we plan to do today.</p>
-                
-                <p class="sectionContent">6) Code review
-                A successful peer review strategy for code review requires a balance between strictly documented processes and a non-threatening, collaborative environment.</p>
-                
-                <p class="sectionContent">7) Integrating QA in the development process
-                We have gotten much better about integrating QA in our development process. We used to loop QA in after our code was pushed to the master branch, which was clunky.</p>
-                
-                <p class="sectionContent">Now our QA engineers will identify and create a test plan as soon as we begin working on the next sprint. As initial development nears completion, an engineer and a QA engineer will run through test scenarios together.</p>
-                
-                <p class="sectionContent">8) Post-release
-                It’s important to circle back and review how the process went once you’re done, be it a success or failure.</p>
-              </p>
+      
 
           </div>
         
@@ -165,14 +157,40 @@
             <img src="/assets/home.webp" alt="homePic" class="homePic">
           </div>
         </div>
-        <div class="sectionImages">
-          <h1 class="sectionTitle3">Images</h1>
-          <div class="imgBox">
-            <img src="/assets/pics2.jpeg" alt="pic1" class="pic1">
+        <div class="sectionImages" id="imgPics">
+          <h1 class="sectionTitle">Images</h1>
+          <div class="imgContainer">
+
+ 
+            <div class="picsShow ">
+              <img src="/assets/ss1.avif" class="sspic">
+            </div>
+          
+            <div class="picsShow ">
+          
+              <img src="/assets/ss2.avif" class="sspic">
+           
+            </div>
+          
+            <div class="picsShow ">
+              
+              <img src="/assets/ss3.avif" class="sspic">
+           
+            </div>
+          
+            
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
           </div>
+          <div class="dotContainer">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+
          
         </div>
-        <div class="sectionServices">
+        <div class="sectionServices" id="servicesSec">
           <div class="leftPart">
             <h1 class="sectionTitle">Services</h1>         
             <img src="/assets/services2.avif" alt="homePic" class="homePic2">
@@ -187,35 +205,32 @@
             </p>
 
             <p class="sectionContent">
-              <h2 class="sectionContent">What does your development process look like?</h2>
-              <p class="sectionContent">1) Test Cases Driven User Stories for Clear Requirements -
-              When our engagement with the client starts we help them create detailed user stories and scope out the next few sprints.</p>
+              <h2 class="sectionContent pinkCon">What all teams we have?</h2>
+              <p class="sectionContent">1) Blockchain 
+              </p>
               
-             <p class="sectionContent"> 2) Intense Sprint Planning
-              In order to execute projects on time, you need to plan sprints as</p>
-              <p class="sectionContent">3) Iterative Delivery
-                Typically, in an agile development process, we will divide the implementation process into several checkpoints rather than a single deadline. They are called iterations and are part of each sprint.</p>
+             <p class="sectionContent"> 2) Frontend Technology- React, Angular, Django etc.
+            </p>
+              <p class="sectionContent">3) Python
+              </p>
                 
-                <p class="sectionContent">4) Documentation
-                We document everything from application and code level architecture decisions, to live user stories document, to design focused UX/UI/Design System documents.</p>
+                <p class="sectionContent">4) Full stack Web Development- MERN or MEAN 
+               </p>
                 
-                <p class="sectionContent">5) Constant Communication and Retrospective
-                Stand-Up Each workday begins with a brief team stand-up meeting to discuss what we did yesterday, and what we plan to do today.</p>
+                <p class="sectionContent">5) Open Source Team
+                </p>
                 
-                <p class="sectionContent">6) Code review
-                A successful peer review strategy for code review requires a balance between strictly documented processes and a non-threatening, collaborative environment.</p>
+                <p class="sectionContent">6) Cloud Technologies
+              </p>
                 
-                <p class="sectionContent">7) Integrating QA in the development process
-                We have gotten much better about integrating QA in our development process. We used to loop QA in after our code was pushed to the master branch, which was clunky.</p>
+                <p class="sectionContent">7) Data Engineering</p>
                 
-                <p class="sectionContent">Now our QA engineers will identify and create a test plan as soon as we begin working on the next sprint. As initial development nears completion, an engineer and a QA engineer will run through test scenarios together.</p>
-                
-            
-
-    
+                <p class="sectionContent">8) Devops </p>    
+                <p class="sectionContent">Simform has whole range of talented teams that work closely on ever changing technologies and see to integrate best of the way to their clients</p>    
           </div>
         </div>
       </div>
     </header>
+    <script src="script.js"></script>
   </body>
 </html>
