@@ -3,11 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 .navbar {
   background-color: white;
   display: flex;
-  /* justify-content: space-around; */
   border-bottom: 4px solid whitesmoke;
 }
 .logo {
@@ -42,11 +40,8 @@ button {
 .sectionAboutUs,
 .sectionServices {
   display: flex;
-  /* background-color: aqua; */
-  /* border-bottom: 3px solid #f25278; */
 }
 .leftPart {
-  /* background-color: aliceblue; */
   width: 30%;
 }
 .rightPart {
@@ -60,36 +55,27 @@ button {
   text-align: justify;
   font-family: "Open Sans", sans-serif;
 }
-
 .homePic,
 .homePic2 {
   height: 90%;
   width: 100%;
 }
-/* .sectionImages {
-  width: 100%;
-} */
 .sectionTitle3 {
   text-align: center;
   margin-bottom: 3%;
 }
-
-/* Slideshow container */
 .imgContainer {
   margin-top: 2%;
   width: 60%;
   position: relative;
   margin: auto;
 }
-
-/* Hide the images by default */
 .picsShow {
   display: none;
 }
 .sspic {
   width: 100%;
 }
-/* Next & previous buttons */
 .prev,
 .next {
   cursor: pointer;
@@ -101,12 +87,10 @@ button {
   color: white;
   font-weight: bold;
   font-size: 18px;
-  /* transition: 0.6s ease; */
   border-radius: 0 3px 3px 0;
   user-select: none;
   background-color: #f25278;
 }
-
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
@@ -125,8 +109,7 @@ button {
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-
-.active,
+.targeted,
 .dot:hover {
   background-color: #f25278;
 }

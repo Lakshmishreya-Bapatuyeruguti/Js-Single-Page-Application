@@ -8,13 +8,12 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
-    
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">    
   </head>
   <body>
-    <header>
+   <!-- Main Container -->
       <div class="container">
+        <!-- Navabar -->
         <div class="navbar">
           <img src="assets/simlogo.png" alt="Logo" class="logo" />
           <h1 class="logoName">Simform</h1>
@@ -25,12 +24,14 @@
               <button onclick="scrollToServices()"><li class="linkItem">Services</li></button>
           </ul>
         </div>
+        <!-- Home section -->
         <div class="sectionHome" id="home">
           <div class="leftPart">
-            <h1 class="sectionTitle">Home</h1>
+        
             <img src="/assets/home3.avif" alt="homePic" class="homePic2"> 
           </div>
           <div class="rightPart">
+            <h1 class="sectionTitle">Home</h1>
             <p class="sectionContent">
             <p class="sectionContent">Simform is one of the finest organizations with great talented team and highly proffesional individuals.We have a great work culture and always look for seamless and good quality product delivery to our clients</p>
             <p class="sectionContent">
@@ -100,9 +101,11 @@
         
           </div>
         </div>
+        <!-- About Us Section -->
         <div class="sectionAboutUs" id="abUs">
          
           <div class="rightPart">
+            <h1 class="sectionTitle">About Us</h1>
             <p class="sectionContent">
               We were founded in <b>2010</b> and are based out in US and INDIA (AHMEDABAD)
               Modern digital experiences require smarter methodologies, better
@@ -148,89 +151,67 @@
                 
                 <p class="sectionContent">4) Documentation
                 We document everything from application and code level architecture decisions, to live user stories document, to design focused UX/UI/Design System documents.</p>
-      
-
-          </div>
-        
+          </div>        
           <div class="leftPart">
-            <h1 class="sectionTitle">About Us</h1>
+          
             <img src="/assets/home.webp" alt="homePic" class="homePic">
           </div>
         </div>
+           <!-- Images Section -->
         <div class="sectionImages" id="imgPics">
           <h1 class="sectionTitle">Images</h1>
           <div class="imgContainer">
-
- 
             <div class="picsShow ">
               <img src="/assets/ss1.avif" class="sspic">
             </div>
-          
-            <div class="picsShow ">
-          
-              <img src="/assets/ss2.avif" class="sspic">
-           
-            </div>
-          
-            <div class="picsShow ">
-              
-              <img src="/assets/ss3.avif" class="sspic">
-           
-            </div>
-          
-            
-            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            <div class="picsShow ">          
+              <img src="/assets/ss2.avif" class="sspic">           
+            </div>          
+            <div class="picsShow ">             
+              <img src="/assets/ss3.avif" class="sspic">           
+            </div>   
+            <a class="prev" onclick="changeSlide(-1)">❮</a>
+            <a class="next" onclick="changeSlide(1)">❯</a>
           </div>
           <div class="dotContainer">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
-          </div>
-
-         
+          </div>         
         </div>
+        <!-- services section -->
         <div class="sectionServices" id="servicesSec">
           <div class="leftPart">
             <h1 class="sectionTitle">Services</h1>         
             <img src="/assets/services2.avif" alt="homePic" class="homePic2">
           </div>
-          <div class="rightPart">
-         
+          <div class="rightPart">         
             <p class="sectionContent">
               Simform’s tried and tested engagement model of team extension has
               been refined over the last 10 years. We make sure we are not
               limited by the distance, time zone differences, and communication
               fluency that come with remote resources.
             </p>
-
             <p class="sectionContent">
               <h2 class="sectionContent pinkCon">What all teams we have?</h2>
               <p class="sectionContent">1) Blockchain 
-              </p>
-              
+              </p>              
              <p class="sectionContent"> 2) Frontend Technology- React, Angular, Django etc.
             </p>
               <p class="sectionContent">3) Python
-              </p>
-                
+              </p>                
                 <p class="sectionContent">4) Full stack Web Development- MERN or MEAN 
-               </p>
-                
+               </p>                
                 <p class="sectionContent">5) Open Source Team
-                </p>
-                
+                </p>               
                 <p class="sectionContent">6) Cloud Technologies
-              </p>
-                
-                <p class="sectionContent">7) Data Engineering</p>
-                
+              </p>                
+                <p class="sectionContent">7) Data Engineering</p>                
                 <p class="sectionContent">8) Devops </p>    
                 <p class="sectionContent">Simform has whole range of talented teams that work closely on ever changing technologies and see to integrate best of the way to their clients</p>    
           </div>
         </div>
       </div>
-    </header>
     <script src="script.js"></script>
   </body>
 </html>

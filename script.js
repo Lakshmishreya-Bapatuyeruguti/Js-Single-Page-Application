@@ -1,61 +1,47 @@
+//Image Slider Function
+let images = document.querySelectorAll(".picsShow");
+let dots = document.querySelectorAll(".dot");
 let idx = 1;
-showSlides(idx);
-function showSlides(n) {
+showImgSlides(idx);
+function showImgSlides(count) {
   let i;
-  let images = document.getElementsByClassName("picsShow");
-  let dots = document.getElementsByClassName("dot");
-  if (n > images.length) {
+  if (count > images.length) {
     idx = 1;
   }
-  if (n < 1) {
+  if (count < 1) {
     idx = images.length;
   }
   for (i = 0; i < images.length; i++) {
     images[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" targeted", "");
   }
   images[idx - 1].style.display = "block";
-  dots[idx - 1].className += " active";
+  dots[idx - 1].className += " targeted";
 }
-function changeSlide(n) {
-  showSlides((idx += n));
+function changeSlide(count) {
+  showImgSlides((idx += count));
 }
-function currentSlide(n) {
-  showSlides((idx = n));
+function currentSlide(count) {
+  showImgSlides((idx = count));
 }
-//  scroll
-
-function scrollToHome() {
-  let elementSelected = document.getElementById("home");
+//  scroll to particular section
+function scrollTo(sec) {
+  let elementSelected = document.getElementById(sec);
   elementSelected.scrollIntoView({
-    block: "start",
     behavior: "smooth",
-    inline: "start",
   });
+}
+function scrollToHome() {
+  scrollTo("home");
 }
 function scrollToAboutUs() {
-  let elementSelected = document.getElementById("abUs");
-  elementSelected.scrollIntoView({
-    // block: "start",
-    behavior: "smooth",
-    inline: "start",
-  });
+  scrollTo("abUs");
 }
 function scrollToImages() {
-  let elementSelected = document.getElementById("imgPics");
-  elementSelected.scrollIntoView({
-    block: "start",
-    behavior: "smooth",
-    inline: "start",
-  });
+  scrollTo("imgPics");
 }
 function scrollToServices() {
-  let elementSelected = document.getElementById("servicesSec");
-  elementSelected.scrollIntoView({
-    block: "start",
-    behavior: "smooth",
-    inline: "start",
-  });
+  scrollTo("servicesSec");
 }
