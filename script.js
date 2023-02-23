@@ -5,19 +5,19 @@ let idx = 1;
 showImgSlides(idx);
 function showImgSlides(count) {
   let i;
-  if (count > images.length) {
-    idx = 1;
-  }
   if (count < 1) {
     idx = images.length;
+  }
+  if (count > images.length) {
+    idx = 1;
   }
   for (i = 0; i < images.length; i++) {
     images[i].style.display = "none";
   }
+  images[idx - 1].style.display = "block";
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" targeted", "");
   }
-  images[idx - 1].style.display = "block";
   dots[idx - 1].className += " targeted";
 }
 function changeSlide(count) {
